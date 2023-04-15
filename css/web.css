@@ -4,13 +4,22 @@ html{
     overflow-x: hidden;
 }
 
-@media (max-width: 768px) {
-  .intro__title {
-    font-size: 60px;
+  @media (max-width: 1199px) {
+    .intro__title {
+      font-size: 8vw;
+    }
   }
   
-  .intro__suptitle {
-    font-size: 36px;
+  @media (max-width: 991px) {
+    .intro__title {
+      font-size: 10vw;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .intro__title {
+      font-size: 12vw;
+    }
   }
   
   .nav__link {
@@ -20,16 +29,7 @@ html{
   .slider__item {
     width: 30%;
   }
-}
-
-@media (min-width: 768px) and (max-width: 1200px) {
-  .intro__title {
-    font-size: 80px;
-  }
   
-  .intro__suptitle {
-    font-size: 48px;
-  }
   
   .nav__link {
     margin: 0 20px;
@@ -38,7 +38,6 @@ html{
   .slider__item {
     width: 25%;
   }
-}
 
 body {
   margin: 0;
@@ -74,7 +73,6 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     width: 100%;
     height: 100vh;
-
     background: url("../img/img.jpg") center no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
@@ -102,12 +100,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .intro__title {
-    color: #fff;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  animation: fadeInUp 2s forwards 0.3s;
+}
+
+@media (min-width: 1200px) {
+  .intro__title {
     font-size: 100px;
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: 1;
-    animation: fadeInUp 2s forwards 0.3s;
+  }
 }
 
 .intro__title:after {
@@ -129,8 +132,12 @@ h1, h2, h3, h4, h5, h6 {
     animation: fadeInUp 2s forwards 0.3s;
 }
 
+@media screen and (max-width: 600px) {
+  .intro__suptitle {
+    font-size: 36px; /* Новый размер шрифта */
+  }
+}
 
-/* Header */
 .header {
     width: 100%;
     padding-top: 30px;
@@ -335,7 +342,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about__item {
-  width: calc(50% - 15px);
+  display: flex;
+  width: calc(50%);
   position: relative;
   overflow: hidden;
 }
@@ -381,6 +389,12 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   z-index: 2;
   transform: translate3d(0, -50%, 0);
+  pointer-events: none;
+  -webkit-user-drag: none; /* Safari */
+  -khtml-user-drag: none; /* Konqueror */
+  -moz-user-drag: none; /* Old versions of Firefox */
+  -o-user-drag: none; /* Old versions of Opera */
+  user-select: none;
 }
 
 
@@ -458,10 +472,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .intro1_about {
-  margin-top: 2.5rem;
-  display: flex;
+  display: inline-flex;
+  flex-direction: row;
   justify-content: center;
-  gap: 5rem;
+  align-items: center;
+  scroll-padding: 0 2rem; /* add padding to prevent other elements from being visible */
 }
 
 .intro1__item {
@@ -497,6 +512,12 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   transition: opacity .1s linear;
   border-radius: 10%;
+}
+
+@media screen and (max-width: 600px) {
+  .intro1__img img {
+    width: 300px;
+  }
 }
 
 .intro1__text {
@@ -556,6 +577,7 @@ footer {
   padding-top: 2.5rem;
 }
 
+
 footer h4 {
   color: #fff;
   margin-bottom: 1.5rem;
@@ -573,6 +595,8 @@ footer input[type="email"] {
 footer button {
   border-radius: 0;
 }
+
+
 
 .container {
   max-width: 90%;
@@ -598,6 +622,12 @@ footer button {
     flex-basis: 100%;
     max-width: 100%;
     margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 575px) {
+  footer {
+  text-align: center;
   }
 }
 
@@ -731,7 +761,16 @@ footer button {
   gap: 0.3rem;
   --stroke: #ffffff;
   --fill: #ffc73a;
-  transform: translate(-300px, 32px);
+ justify-content: center;
+ margin-top: 5%;
+}
+
+@media (max-width: 767px) {
+  .rating {
+    transform: translate(0, 0);
+    justify-content: center
+    
+  }
 }
 
 .rating input {
@@ -832,6 +871,7 @@ footer button {
   align-items: left;
 }
 
+
 .decor {
   position: relative;
   display: flex;
@@ -840,6 +880,14 @@ footer button {
   border-radius: 30px;
   margin-left: 5%;
 }
+
+@media screen and (max-width: 600px) {
+  .decor {
+    max-width: 350px;
+    margin: 0 auto; /* Центрирование по горизонтали */
+  }
+}
+
 .form-left-decoration, .form-right-decoration {
   width: 30px;
   height: 15px;
@@ -994,6 +1042,11 @@ cursor: pointer;
   float: right;
   margin-left: 20px;
   width: 50%;
+  }
+  @media (max-width: 575px) {
+    .table {
+      display: none;
+    }
   }
   .icons {
     display: flex;

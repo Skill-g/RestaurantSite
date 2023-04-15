@@ -64,21 +64,21 @@
     <div class="about" class="bounceInUp wow">
       <div class="about__item">
           <div class="about__img">
-              <span><img src="./img/inter1.jpg" alt="" class="bounceInUp wow" data-wow-duration="1s" width="500px" height="500px" ><span>
+              <span><img src="./img/inter1.jpg" alt="" class="bounceInUp wow" data-wow-duration="1s"><span>
           </div>
-          <div class="about__text">Вход</div>
+          <div class="about__text" ondragstart="return false;">Вход</div>
       </div>
       <div class="about__item">
           <div class="about__img">
-              <span><img src="./img/inter1.jpg" alt="" class="bounceInUp wow" data-wow-duration="1s" width="600px" height="1000px" ><span>
+              <span><img src="./img/zal.jpg" alt="" class="bounceInUp wow" data-wow-duration="1s"><span>
           </div>
-          <div class="about__text">Холл</div>
+          <div class="about__text" ondragstart="return false;">Холл</div>
       </div>
       <div class="about__item">
-          <div class="about__img" class="bounceInUp wow">
-              <img src="./img/inter1.jpg" alt="" class="bounceInUp wow" data-wow-duration="2s" data-wow-duration="1s" width="500px" height="500px">
+          <div class="about__img">
+              <img src="./img/kithen.jpg" alt="" class="bounceInUp wow" data-wow-duration="1s">
           </div>
-          <div class="about__text">Кухня</div>
+          <div class="about__text" ondragstart="return false;">Кухня</div>
       </div>
       </div>
 </div>
@@ -159,12 +159,12 @@ var swiper = new Swiper('.swiper-container', {
       <div class="row">
         <div class="col-md-4">
           <h4>О нас</h4>
-          <p >Мы команда профессионалов, занимающихся созданием красивых блюд и напитков для наших посетителей.</p>
+          <h4>Мы команда профессионалов, занимающихся созданием красивых блюд и напитков для наших посетителей.<h4>
         </div>
-        <div>
+        <div class="col-md-4">
           <h4>Связаться с нами</h4>
-          <p>Телефон: +7 778 355 1833<br> Email: govakoroman@gmail.com<br> Адрес: ул. Абая 35</p>
-        </div>
+          <h4>Телефон: +7 778 355 1833<br> Email: govakoroman@gmail.com<br> Адрес: ул. Абая 35<h4>
+        </div>  
         <div class="col-md-4">
           <h4 style="display: flex; justify-content: center;">Подписаться на нас</h4>
           <div class="icons">
@@ -210,6 +210,14 @@ document.querySelector("input[type='tel']").addEventListener("blur", function() 
   if (!this.value.startsWith("+") || !/^\+\d{1,11}$/.test(this.value)) {
     this.value = "";
   }
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var elements = document.querySelectorAll('*');
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].ondragstart = function() { return false; };
+    }
 });
 </script>
 
