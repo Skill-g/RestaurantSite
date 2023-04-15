@@ -348,6 +348,13 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  .about__item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
 .about__item:hover .about__img {
   transform: translate3d(-10px, -10px, 0);
 }
@@ -373,6 +380,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: opacity .2s linear; 
   border-radius: 10%;
 }
+
 
 
 .about__text {

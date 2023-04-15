@@ -1,0 +1,42 @@
+<?php 
+
+    $host = '31.31.196.177';
+    $db_name = 'u1486089_banlist';
+    $user = 'u1486089_banlist';
+    $password = 'saldin2003';
+ 
+      $connection = mysqli_connect($host, $user, $password, $db_name);
+
+      $query = "SELECT * FROM du_users WHERE member='1'";
+
+      $result = mysqli_query($connection, $query);
+		
+    echo '<table width="1000" border="1" style="color:black;">';
+  echo '<thead>';
+  echo '<tr>';
+  echo '<th>ID</th>';
+  echo '<th>Пользователь</th>';
+  echo '<th>STEAM:ID</th>';
+  echo '<th>Участие</th>';
+  echo '</tr>';
+  echo '</thead>';
+  echo '<tbody>';
+  
+
+  while($row = $result->fetch_assoc()){
+    echo '<tr>';
+    echo '<td align="center">' . $row['ID'] . '</td>';
+    echo '<td align="center">' . $row['userid'] . '</td>';
+    echo '<td align="center">' . $row['steamid'] . '</td>';
+    echo '<td align="center">' . $row['member'] . '</td>';
+    echo '</tr>';
+  }
+  
+    echo '</tbody>';
+  echo '</table>';
+
+    mysqli_close($connection);
+	
+	
+?>
+

@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# перенаправляем запросы с /admin на /pages/admin.html
+RewriteRule ^admin$ /php/admin.php [L,R=301]
+
+# убираем расширение .html из URL страниц
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
