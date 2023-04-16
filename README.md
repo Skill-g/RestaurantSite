@@ -1,2 +1,2 @@
-# shop.csretro.ru
+# Ресторан "Une vie délicieuse"
 Верстка + Мобильная адаптация + Работа с бд + JS + PHP
