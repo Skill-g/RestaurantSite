@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html style="overflow-y: hidden;" lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/web.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <meta http-equiv="refresh" content="5;url=http://shop.csretro.ru">
+    <title>404</title>
+</head>
+<body class="background-404"> 
+    <div class="elements">
+     <ion-icon class="ion-icons1" name="warning-outline"></ion-icon>
+    <p class="text-404"> 404 <br>Такой страницы не существует. <br> Вы будете перемещены на главную страницу через 5 секунд!</p>
+    </div>
+</body>
+</html>
+
+<style>
+/* стили для элементов */
+.elements {
+  opacity: 0; /* скрыть элементы при загрузке */
+  position: relative; /* задать относительное позиционирование */
+  top: -100%; /* сдвинуть элементы на 100% вверх */
+  animation-name: slide-in; /* задать анимацию slide-in */
+  animation-duration: 2s; /* продолжительность анимации */
+  animation-fill-mode: forwards; /* оставить элементы на месте после окончания анимации */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* анимация slide-in */
+@keyframes slide-in {
+  0% {
+    display: flex;
+    opacity: 0;
+    top: -100%;
+    margin-bottom: 100%; /* убрать отступ снизу */
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+</style>

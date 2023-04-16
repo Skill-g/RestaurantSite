@@ -49,7 +49,7 @@ try {
       <link rel="stylesheet" href="../css/web.css">
       </head>
   </html>
-  <div class="pad container3 bounceInUp wow" id="bron">
+  <div  style="margin-left: 5%; margin-right: 5%"class="pad container3 bounceInUp wow" id="bron">
     <form class="decor" method="post" id="myForm" readonly>
       <div class="form-left-decoration"></div>
       <div class="form-right-decoration"></div>

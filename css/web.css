@@ -1063,3 +1063,45 @@ cursor: pointer;
     display: flex;
     gap: 30px;
   }
+  .ion-icons1{
+  display: flex;
+  margin-left: 34%;
+  font-size: 300px;
+  }
+  .background-404{
+    display: flex;
+    justify-content: center;
+    background-color: #d87d56;
+    transform: translateY(30%);
+    -webkit-transform: translateY(30%);
+    -moz-transform: translateY(30%);
+    -ms-transform: translateY(30%);
+    -o-transform: translateY(30%);
+}
+  .text-404
+  {
+  display: flex;
+  font-size:xx-large;
+  justify-content: center;
+  text-align: center;
+  }
+
+  @media only screen and (max-width: 480px) {
+    .ion-icons1 {
+      transform: translateX(-7%);
+      font-size: 150px;
+      -webkit-transform: translateX(-7%);
+      -moz-transform: translateX(-7%);
+      -ms-transform: translateX(-7%);
+      -o-transform: translateX(-7%);
+}
+    .background-404 {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+    }
+    .text-404 {
+      font-size: large;
+    }
+  }
+  
